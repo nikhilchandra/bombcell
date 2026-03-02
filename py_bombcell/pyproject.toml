@@ -7,7 +7,7 @@ name = "bombcell"
 version = "0.65"
 description = "Python port of bombcell. Automated quality control, curation and neuron classification of spike-sorted electrophysiology data."
 readme = "README.md"
-license = {text = "GPL-3.0"}
+license = "GPL-3.0"
 authors = [
     {name = "Julie Fabre"},
     {name = "Sam Dodgson"},
@@ -20,7 +20,6 @@ requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -38,7 +37,7 @@ dependencies = [
     "tqdm>=4.50.0",
     "pyarrow>=5.0.0",
     "numba>=0.58.1",
-    "upsetplot",
+    "upsetplot-bombcell",
     "mtscomp",
     "cachecache",
 ]
@@ -50,6 +49,8 @@ Issues = "https://github.com/Julie-Fabre/bombcell/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
+include = ["bombcell*"]
+exclude = ["build*"]
 
 [tool.setuptools]
 include-package-data = true
