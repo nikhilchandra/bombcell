@@ -1487,7 +1487,7 @@ def waveform_shape(
         spatial_decay_slope = np.nan
 
         if param["computeSpatialDecay"]:
-            if np.min(np.diff(np.unique(channel_positions[:, 1]))) < 30:
+            if np.min(np.diff(np.unique(channel_positions[:, 1]))) < 40:
                 param["computeSpatialDecay"] = True
             else:
                 param["computeSpatialDecay"] = False
